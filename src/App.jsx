@@ -5,7 +5,7 @@ const pages = [
 ];
 
 const Button = ({ children, className = '', ...props }) => (
-  <button className={\`bg-blue-600 text-white rounded px-4 py-2 w-full \${className}\`} {...props}>{children}</button>
+  <button className={`bg-blue-600 text-white rounded px-4 py-2 w-full ${className}`} {...props}>{children}</button>
 );
 
 const Card = ({ children }) => (
@@ -13,7 +13,7 @@ const Card = ({ children }) => (
 );
 
 const CardContent = ({ children, className = '' }) => (
-  <div className={\`p-4 \${className}\`}>{children}</div>
+  <div className={`p-4 ${className}`}>{children}</div>
 );
 
 export default function App() {
@@ -31,7 +31,7 @@ export default function App() {
   return (
     <div className="p-6 max-w-md mx-auto font-sans">
       <h1 className="text-2xl font-bold text-blue-600 text-center mb-6">꽃맘전 - {pages[step]}</h1>
-      {/* 생략: 각 화면 step === n 의 JSX 구조 */}
+      <div className="text-center text-gray-500">※ 여기에 단계별 화면이 표시됩니다.</div>
       <div className="flex justify-between mt-6 text-sm text-gray-500">
         <button onClick={prev} disabled={step === 0} className="text-blue-600">이전</button>
         <span>Step {step + 1} / {pages.length}</span>
